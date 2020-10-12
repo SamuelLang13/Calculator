@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello, World!\n");
+    double num1;
+    double num2;
+    double sum;
+    char operation;
     return 0;
 }
