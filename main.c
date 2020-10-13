@@ -1,32 +1,30 @@
 #include <stdio.h>
+#include <float.h>
+#include <math.h>
 
 int main() {
+
     double num1;
     double num2;
-    int sum;
+    double sum;
+    double pcsum;
     char operation;
-    printf("Zadejte vzorec:\n");
-    scanf(" %lf  %c  %lf =",&num1,&operation,&num2);
-    switch (operation) {
-        case '+':
-            sum=num1+num2;
-            printf("%f\n",sum);
-            break;
-        case '-':
-            sum=num1-num2;
-            printf("%f\n",sum);
-            break;
-        case '*':
-            sum=num1*num2;
-            printf("%f\n",sum);
-            break;
-        case '/':
-            sum=num1/num2;
-            printf("%f\n",sum);
-            break;
-        default:
-            printf("Nespravny vstup.");
-            break;
+
+    printf("Zadejte rovnici:\n");
+    if(scanf(" %lf %c %lf = %lf",&num1,&operation,&num2,&operation)!=4)
+    {
+        printf("Nespravny vstup.\n");
     }
+    else
+    {
+        switch (operation)
+        {
+            case '+':
+                pcsum=num1+num2;
+
+
+        }
+    }
+
     return 0;
 }
