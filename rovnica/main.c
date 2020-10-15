@@ -24,43 +24,82 @@ int main() {
         switch (operation) {
             case '+': {
                 sum = num1 + num2;
-                if (fabs(sum-result)<=100*DBL_EPSILON*sum*sum )
+                if (fabs(sum-result)<=1000*DBL_EPSILON*sum*sum )
                 {
-                    printf("%g\n", sum);
+                    printf("Rovnice je spravne.\n");
+                }
+                else
+                {
+                    printf("%g != %g\n",sum,result);
                 }
                 break;
             }
 
             case '-': {
                 sum = num1 - num2;
-                if (fabs(sum-result)<=100*DBL_EPSILON*sum*sum )
+                if (fabs(sum-result)<=1000*DBL_EPSILON*sum*sum )
                 {
-                    printf("%g\n", sum);
+                    printf("Rovnice je spravne.\n");
+                }
+                else
+                {
+                    printf("%g != %g\n",sum,result);
                 }
                 break;
             }
 
             case '*': {
                 sum = num1 * num2;
-                if (fabs(sum-result)<=100*DBL_EPSILON*sum*sum )
+                if (fabs(sum-result)<=1000*DBL_EPSILON*sum*sum )
                 {
-                    printf("%g\n", sum);
+                    printf("Rovnice je spravne.\n");
+                }
+                else
+                {
+                    printf("%g != %g\n",sum,result);
                 }
                 break;
 
             }
             case '/': {
-                if (num2 != 0)
+                if (num2 == 0)
                 {
-                    sum=num1/num2;
-                    if (fabs(sum-result)<=100*DBL_EPSILON*sum*sum )
-                    {
-                        printf("%g\n", sum);
-                    }
-                    break;
+
+                    printf("Nespravny vstup.\n");
 
                 } else {
-                    printf("Nespravny vstup.\n");
+
+                    sum=num1/num2;
+                    if((int)result==result)
+                    {
+                        int sum1=sum;
+                        if (fabs(sum1-result)<=1000*DBL_EPSILON*sum1*sum1 )
+                        {
+                        
+                            printf("Rovnice je spravne.\n");
+                        }
+                        else
+                        {
+                            printf("%d != %g\n",sum1,result);
+                        }
+                    }
+                    else
+                    {
+                        
+                        if (fabs(sum-result)<=1000*DBL_EPSILON*sum*sum )
+                        {
+                        
+                            printf("Rovnice je spravne.\n");
+                        }
+                        else
+                        {
+                            printf("%g != %g\n",sum,result);
+                        }
+                        
+                    }
+
+                    
+
                 }
 
                 break;
